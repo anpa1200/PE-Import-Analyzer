@@ -8,7 +8,7 @@ A command-line utility to analyze the import table of PE files. Provides detaile
 
 ---
 
-## 🔍 Features 🔍 Features
+## 🔍 Features
 
 - **Import Table Extraction**: Uses LIEF to parse PE files and extract all imported DLLs and their functions.
 - **DLL Summaries**: Built-in explanations for core Windows DLLs (e.g., `kernel32.dll`, `user32.dll`, `advapi32.dll`, `ntdll.dll`, `ws2_32.dll`, `wininet.dll`, etc.).
