@@ -21,3 +21,11 @@ htmlcov/
 .vscode/
 *.swp
 .DS_Store
+
+# Samples (do not commit binaries)
+samples/
+
+# Generated reports / outputs
+report.html
+prompt.txt
+*.log

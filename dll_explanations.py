@@ -1,4 +1,7 @@
-"""DLL/API explanation data and dangerous-API definitions for PE-Import-Analyzer."""
+"""DLL/API explanation data and dangerous-API definitions for PE-Import-Analyzer.
+
+API descriptions are based on Microsoft documentation (learn.microsoft.com/windows/win32).
+"""
 
 DEFAULT_EXPLANATION = "No explanation available. Please refer to official documentation."
 
@@ -57,7 +60,102 @@ dll_api_explanations = {
             "heapfree": "Frees a memory block allocated from a specified heap.",
             "getmodulefilename": "Retrieves the fully qualified path for the file that contains the specified module.",
             "getfilesize": "Retrieves the size of the specified file in bytes.",
-            "setfilepointer": "Moves the file pointer of an open file to a specified position."
+            "setfilepointer": "Moves the file pointer of an open file to a specified position.",
+            "createprocessa": "Creates a new process and its primary thread (ANSI).",
+            "createtoolhelp32snapshot": "Takes a snapshot of processes, heaps, modules, or threads in the system.",
+            "duplicatehandle": "Duplicates an object handle for use in another process.",
+            "freelibrary": "Frees a loaded DLL from the process address space.",
+            "getcurrentprocessid": "Returns the process identifier of the calling process.",
+            "getsystemwow64directorya": "Retrieves the path of the system directory used by WOW64 (ANSI).",
+            "getthreadcontext": "Retrieves the context of the specified thread.",
+            "getvolumeinformationw": "Retrieves information about a file system and volume (Unicode).",
+            "lcidtolocalename": "Converts a locale identifier to a locale name.",
+            "loadlibrarya": "Loads the specified DLL into the process address space (ANSI).",
+            "localfree": "Frees memory allocated from the local heap.",
+            "multibytetowidechar": "Maps a multibyte string to a wide-character (UTF-16) string.",
+            "process32firstw": "Retrieves information about the first process in a snapshot (Unicode).",
+            "process32nextw": "Retrieves information about the next process in a snapshot (Unicode).",
+            "setthreadcontext": "Sets the context of the specified thread.",
+            "virtualallocex": "Reserves or commits memory in the virtual address space of another process.",
+            "writeprocessmemory": "Writes data to memory in a specified process.",
+            "comparestringa": "Compares two character strings for a locale (ANSI).",
+            "comparestringw": "Compares two character strings for a locale (Unicode).",
+            "convertdefaultlocale": "Converts a default locale value.",
+            "findfirstfilea": "Initiates a search for files/directories matching a pattern (ANSI).",
+            "findresourcea": "Finds a resource in a module (ANSI).",
+            "formatmessagea": "Formats a message string (ANSI).",
+            "getcpinfo": "Retrieves code-page information.",
+            "getcurrentthreadid": "Returns the thread identifier of the calling thread.",
+            "getenvironmentstrings": "Returns the environment block for the current process.",
+            "getenvironmentstringsw": "Returns the environment block for the current process (Unicode).",
+            "getfileattributesa": "Retrieves file system attributes for a file or directory (ANSI).",
+            "getfiletime": "Retrieves the date and time that a file was created, last accessed, or last modified.",
+            "getfiletype": "Retrieves the type of the specified file.",
+            "getfullpathnamea": "Retrieves the full path of the specified file (ANSI).",
+            "getlocaleinfoa": "Retrieves locale information (ANSI).",
+            "getmodulefilenamea": "Retrieves the fully qualified path for the file containing the specified module (ANSI).",
+            "getoemcp": "Retrieves the current OEM code page identifier.",
+            "getstartupinfoa": "Retrieves startup information for the process (ANSI).",
+            "getstdhandle": "Retrieves a handle for the standard input, output, or error device.",
+            "getstringtypea": "Retrieves character type information for a string (ANSI).",
+            "getstringtypew": "Retrieves character type information for a string (Unicode).",
+            "getsysteminfo": "Retrieves information about the current system.",
+            "getsystemtimeasfiletime": "Retrieves the current system time as a file time.",
+            "getthreadlocale": "Retrieves the locale of the current thread.",
+            "gettimezoneinformation": "Retrieves the current time zone settings.",
+            "getversion": "Returns the version of the operating system.",
+            "getversionexa": "Retrieves extended version information (ANSI).",
+            "getvolumeinformationa": "Retrieves information about a file system and volume (ANSI).",
+            "globaladdatoma": "Adds a character string to the global atom table (ANSI).",
+            "globalflags": "Retrieves or sets flags for a global memory object.",
+            "globalfindatoma": "Searches the global atom table for a string (ANSI).",
+            "globalgetatomnamea": "Retrieves the name of a global atom (ANSI).",
+            "globalhandle": "Retrieves the handle associated with a pointer to a global memory block.",
+            "globallock": "Locks a global memory object and returns a pointer.",
+            "globalrealloc": "Reallocates a global memory block.",
+            "globalunlock": "Decrements the lock count of a global memory object.",
+            "heapcreate": "Creates a private heap object.",
+            "heapdestroy": "Destroys the specified heap object.",
+            "heaprealloc": "Reallocates a block of memory from a heap.",
+            "heapsize": "Returns the size of an allocated memory block from a heap.",
+            "lcmapstringa": "Maps one character string to another (ANSI, locale).",
+            "lcmapstringw": "Maps one character string to another (Unicode, locale).",
+            "loadresource": "Loads the specified resource into global memory.",
+            "localalloc": "Allocates memory from the local heap.",
+            "localrealloc": "Reallocates a local memory block.",
+            "lockfile": "Locks a region of an open file.",
+            "lockresource": "Locks a resource and retrieves a pointer to it.",
+            "lstrcata": "Concatenates two strings (ANSI).",
+            "lstrcmpa": "Compares two strings (ANSI).",
+            "lstrcmpia": "Compares two strings, case-insensitive (ANSI).",
+            "lstrcmpw": "Compares two strings (Unicode).",
+            "lstrcpya": "Copies a string (ANSI).",
+            "lstrcpyna": "Copies up to a length of characters from one string to another (ANSI).",
+            "lstrlena": "Returns the length of a string in characters (ANSI).",
+            "muldiv": "Multiplies two 32-bit values and divides the 64-bit result by a third value.",
+            "raiseexception": "Raises an exception in the calling process.",
+            "rtlunwind": "Unwinds the stack frame during exception handling.",
+            "setendoffile": "Sets the physical file size to the current position.",
+            "setenvironmentvariablea": "Sets the value of an environment variable (ANSI).",
+            "seterrormode": "Controls whether the system will handle specific errors.",
+            "sethandlecount": "Obsolete; sets the number of file handles available to the process.",
+            "setlasterror": "Sets the last-error code for the calling thread.",
+            "setstdhandle": "Sets the handle for the standard input, output, or error device.",
+            "sizeofresource": "Returns the size in bytes of a resource.",
+            "tlsalloc": "Allocates a thread local storage (TLS) index.",
+            "tlsfree": "Frees a TLS index.",
+            "tlsgetvalue": "Retrieves the value in the TLS slot for the calling thread.",
+            "tlssetvalue": "Stores a value in the TLS slot for the calling thread.",
+            "unhandledexceptionfilter": "Sets the top-level unhandled exception filter.",
+            "unlockfile": "Unlocks a region of a file previously locked with LockFile.",
+            "virtualquery": "Retrieves information about a range of pages in the virtual address space.",
+            "widechartomultibyte": "Maps a wide-character string to a multibyte string.",
+            "writeprivateprofilestringa": "Writes a string to a key in an ini file (ANSI).",
+            "createfilea": "Creates or opens a file, device, or I/O resource (ANSI).",
+            "getmodulehandlea": "Retrieves a handle to a module that is already loaded (ANSI).",
+            "virtualprotect": "Changes the protection on a region of committed virtual memory.",
+            "setunhandledexceptionfilter": "Sets the top-level unhandled exception filter.",
+            "getkeystate": "Retrieves the state of a virtual key (keyboard)."
         }
     },
     "user32.dll": {
@@ -112,7 +210,105 @@ dll_api_explanations = {
             "getsystemmenu": "Retrieves a handle to the window menu for the specified window.",
             "trackpopupmenu": "Displays a shortcut menu at the specified location and tracks the selection of items.",
             "setlayeredwindowattributes": "Sets the opacity and transparency color key of a layered window.",
-            "drawframecontrol": "Draws a frame control of a specified type and style."
+            "drawframecontrol": "Draws a frame control of a specified type and style.",
+            "appendmenua": "Appends a new menu item to the end of a menu (ANSI).",
+            "beginpaint": "Prepares a window for painting and fills a PAINTSTRUCT.",
+            "callnexthookex": "Passes the hook information to the next hook procedure in the chain.",
+            "callwindowproca": "Passes a message to the window procedure (ANSI).",
+            "charnexta": "Retrieves the next character in a string (ANSI).",
+            "charuppera": "Converts a character or string to uppercase (ANSI).",
+            "checkmenuitem": "Sets the check state of a menu item.",
+            "copyacceleratortablea": "Copies an accelerator table (ANSI).",
+            "copyrect": "Copies the coordinates of one rectangle to another.",
+            "createdialogindirectparama": "Creates a modal dialog from a template (ANSI).",
+            "createwindowexa": "Creates an overlapped, pop-up, or child window with extended styles (ANSI).",
+            "defwindowproca": "Provides default processing for window messages (ANSI).",
+            "destroymenu": "Destroys the specified menu and frees its memory.",
+            "dispatchmessagea": "Dispatches a message to a window procedure (ANSI).",
+            "drawtexta": "Draws formatted text in a rectangle (ANSI).",
+            "drawtextexa": "Draws formatted text with extended options (ANSI).",
+            "enablemenuitem": "Enables, disables, or grays a menu item.",
+            "endpaint": "Marks the end of painting in a window.",
+            "equalrect": "Determines whether two rectangles are equal.",
+            "getactivewindow": "Retrieves the window handle to the active window.",
+            "getcapture": "Retrieves the handle to the window that has the mouse capture.",
+            "getclassinfoa": "Retrieves information about a window class (ANSI).",
+            "getclassinfoexa": "Retrieves extended information about a window class (ANSI).",
+            "getclasslonga": "Retrieves a long value from the extra class memory (ANSI).",
+            "getclassnamea": "Retrieves the name of the class to which a window belongs (ANSI).",
+            "getdesktopwindow": "Retrieves the handle to the desktop window.",
+            "getdlgctrlid": "Retrieves the identifier of the specified control.",
+            "getdlgitem": "Retrieves the handle to a control in a dialog box.",
+            "getforegroundwindow": "Retrieves the handle to the foreground window.",
+            "getlastactivepopup": "Retrieves the handle to the last active popup window.",
+            "getmenu": "Retrieves the handle to the menu assigned to a window.",
+            "getmenuitemcount": "Retrieves the number of items in a menu.",
+            "getmenuitemid": "Retrieves the menu item identifier of a menu item.",
+            "getmenustate": "Retrieves the menu item state.",
+            "getmessagea": "Retrieves a message from the calling thread's message queue (ANSI).",
+            "getmessagepos": "Retrieves the cursor position when the last message was received.",
+            "getmessagetime": "Retrieves the time when the last message was received.",
+            "getnextdlggroupitem": "Retrieves the handle to the next control in a group.",
+            "getnextdlgtabitem": "Retrieves the handle to the next control with the WS_TABSTOP style.",
+            "getparent": "Retrieves the handle to the parent of the specified window.",
+            "getpropa": "Retrieves a data value from the property list of a window (ANSI).",
+            "getsubmenu": "Retrieves the handle to the drop-down menu or submenu.",
+            "getsyscolor": "Retrieves the current color of a display element.",
+            "getsyscolorbrush": "Retrieves a handle to a brush for a system color.",
+            "getwindowdc": "Retrieves the device context for the entire window.",
+            "getwindowlonga": "Retrieves information about a window (ANSI).",
+            "getwindowrect": "Retrieves the dimensions of the bounding rectangle of a window.",
+            "getwindowtexta": "Retrieves the title bar text of a window (ANSI).",
+            "graystringa": "Draws gray text at the specified location (ANSI).",
+            "intersectrect": "Calculates the intersection of two rectangles.",
+            "invalidaterect": "Adds a rectangle to the window's update region.",
+            "invalidatergn": "Adds a region to the window's update region.",
+            "ischild": "Determines whether a window is a child window of a specified parent.",
+            "isdialogmessagea": "Determines whether a message is intended for a dialog (ANSI).",
+            "isiconic": "Determines whether a window is minimized.",
+            "isrectempty": "Determines whether a rectangle is empty.",
+            "iswindowenabled": "Determines whether a window is enabled for input.",
+            "iswindowvisible": "Determines the visibility state of a window.",
+            "loadbitmapa": "Loads a bitmap resource (ANSI).",
+            "loadcursora": "Loads the specified cursor resource (ANSI).",
+            "loadicona": "Loads the specified icon resource (ANSI).",
+            "loadstringw": "Loads a string resource (Unicode).",
+            "mapdialogrect": "Converts dialog box units to screen units.",
+            "mapwindowpoints": "Maps points from one window's coordinate space to another.",
+            "messagebeep": "Plays a waveform sound.",
+            "messageboxa": "Displays a modal dialog with a message and buttons (ANSI).",
+            "modifymenua": "Changes an existing menu item (ANSI).",
+            "movewindow": "Changes the position and dimensions of a window.",
+            "offsetrect": "Moves a rectangle by the specified offsets.",
+            "peekmessagea": "Checks the message queue for a message (ANSI).",
+            "postmessagea": "Posts a message to the message queue (ANSI).",
+            "postquitmessage": "Indicates that a message should terminate the thread.",
+            "postthreadmessagea": "Posts a message to a thread (ANSI).",
+            "ptinrect": "Determines whether a point is inside a rectangle.",
+            "registerclassa": "Registers a window class for subsequent use (ANSI).",
+            "registerclipboardformata": "Registers a new clipboard format (ANSI).",
+            "registerwindowmessagea": "Defines a new window message (ANSI).",
+            "releasecapture": "Releases the mouse capture from the current thread.",
+            "removepropa": "Removes an entry from the window property list (ANSI).",
+            "senddlgitemmessagea": "Sends a message to a control in a dialog (ANSI).",
+            "sendmessagea": "Sends a message to a window and waits for processing (ANSI).",
+            "setactivewindow": "Activates a window.",
+            "setcapture": "Sets the mouse capture to the specified window.",
+            "setdlgitemtexta": "Sets the title or text of a control in a dialog (ANSI).",
+            "setmenuitembitmaps": "Associates bitmaps with a menu item.",
+            "setpropa": "Sets a value in the window property list (ANSI).",
+            "setrect": "Sets the coordinates of a rectangle.",
+            "setwindowcontexthelpid": "Sets the help context identifier for a window.",
+            "setwindowlonga": "Sets information about a window (ANSI).",
+            "setwindowtexta": "Sets the title bar text of a window (ANSI).",
+            "setwindowshookexa": "Installs an application-defined hook procedure (ANSI).",
+            "systemparametersinfoa": "Retrieves or sets system-wide parameters (ANSI).",
+            "tabbedtextouta": "Writes a character string at a location with tab expansion (ANSI).",
+            "unhookwindowshookex": "Removes a hook procedure installed by SetWindowsHookEx.",
+            "unregisterclassa": "Unregisters a window class (ANSI).",
+            "validaterect": "Validates the client area within a rectangle.",
+            "winhelpa": "Starts Windows Help (ANSI).",
+            "wsprintfa": "Writes formatted data to a buffer (ANSI)."
         }
     },
     "advapi32.dll": {
@@ -121,14 +317,31 @@ dll_api_explanations = {
             "OpenSCManagerA": "Opens a handle to the Service Control Manager database (ANSI).",
             "OpenServiceA": "Opens an existing service from the SCM database (ANSI).",
             "RegCloseKey": "Closes a handle to a registry key.",
+            "regcreatekeyexa": "Creates or opens a registry key with specified options (ANSI).",
+            "regdeletekeya": "Deletes a registry key (ANSI).",
+            "regenumkeya": "Enumerates subkeys of an open registry key (ANSI).",
             "RegOpenKeyA": "Opens a registry key (ANSI, basic access).",
+            "regopenkeya": "Opens a registry key (ANSI, basic access).",
             "RegOpenKeyExA": "Opens a registry key with extended options (ANSI).",
+            "regopenkeyexa": "Opens a registry key with extended options (ANSI).",
+            "regqueryvaluea": "Retrieves the data for a registry value (ANSI).",
             "RegQueryValueExA": "Retrieves the type and data of a registry value (ANSI).",
+            "regqueryvalueexa": "Retrieves the type and data of a registry value (ANSI).",
+            "regsetvalueexa": "Sets the data and type for a registry value (ANSI).",
+            "setfilesecurityw": "Sets security information for a file (Unicode).",
             "regopenkeyex": "Opens a registry key with the desired access rights.",
             "regqueryvalueex": "Retrieves the type and data for a specified registry value.",
             "regsetvalueex": "Sets the data for a specified registry value.",
             "regenumkeyex": "Enumerates subkeys of an open registry key.",
+            "regenumkeyexa": "Enumerates subkeys of an open registry key (ANSI).",
             "regenumvalue": "Enumerates the values of an open registry key.",
+            "cryptacquirecontextw": "Acquires a handle to a cryptographic service provider (Unicode).",
+            "cryptdecrypt": "Decrypts data using a specified cryptographic key.",
+            "cryptdestroykey": "Destroys a cryptographic key and frees its handle.",
+            "cryptencrypt": "Encrypts data using a specified cryptographic key.",
+            "cryptimportkey": "Imports a cryptographic key from a key blob into the CSP.",
+            "cryptreleasecontext": "Releases a handle to a cryptographic service provider.",
+            "cryptsetkeyparam": "Sets parameters for a cryptographic key.",
             "regclosekey": "Closes a handle to a registry key.",
             "regcreatekeyex": "Creates or opens a registry key with specified options.",
             "regdeletekey": "Deletes a specified registry key.",
@@ -442,7 +655,9 @@ dll_api_explanations = {
             "oleobjectsethostnames": "Sets the host names for an OLE object.",
             "oleobjectgethostnames": "Retrieves the host names for an OLE object.",
             "oleobjectinitialize": "Initializes an OLE object for use.",
-            "oleobjectfinalize": "Finalizes an OLE object, cleaning up resources."
+            "oleobjectfinalize": "Finalizes an OLE object, cleaning up resources.",
+            "cocreateguid": "Creates a new globally unique identifier (GUID).",
+            "stringfromguid2": "Converts a binary GUID to a string representation."
         }
     },
     "oleaut32.dll": {
@@ -498,6 +713,19 @@ dll_api_explanations = {
             "variantfloor": "Rounds a VARIANT numeric value down to the nearest integer.",
             "variantceil": "Rounds a VARIANT numeric value up to the nearest integer.",
             "variantformat": "Formats a VARIANT value into a human-readable string."
+        }
+    },
+    "secur32.dll": {
+        "explanation": "Provides authentication and security context management for SSPI (Security Support Provider Interface).",
+        "apis": {
+            "acquirecredentialshandlea": "Obtains a handle to credentials for the specified security principal (ANSI).",
+            "decryptmessage": "Decrypts a message that was encrypted with EncryptMessage.",
+            "deletesecuritycontext": "Frees a security context and associated resources.",
+            "encryptmessage": "Encrypts a message to provide confidentiality.",
+            "freecontextbuffer": "Frees a buffer allocated by an SSPI function.",
+            "freecredentialshandle": "Frees a credential handle obtained from AcquireCredentialsHandle.",
+            "initializesecuritycontexta": "Initiates a security context for the client side of a connection (ANSI).",
+            "querycontextattributesw": "Retrieves attributes of a security context (Unicode)."
         }
     },
     "shell32.dll": {
@@ -566,18 +794,18 @@ dll_api_explanations = {
             "choosefont": "Displays a dialog box that enables the user to choose a font.",
             "findtext": "Displays a dialog box for searching text.",
             "replacetext": "Displays a dialog box for replacing text.",
-            "commdlg_api9": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api10": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api11": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api12": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api13": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api14": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api15": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api16": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api17": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api18": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api19": "Common dialog function placeholder for additional API usage.",
-            "commdlg_api20": "Common dialog function placeholder for additional API usage.",
+            "commdlg_api9": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api10": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api11": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api12": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api13": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api14": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api15": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api16": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api17": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api18": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api19": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
+            "commdlg_api20": "Common dialog helper for Open/Save/Print/Color/Font dialogs. See Microsoft documentation.",
             "getfileopenhook": "Sets a hook function for the Open dialog box.",
             "getfilesavehook": "Sets a hook function for the Save dialog box.",
             "choosefonthook": "Sets a hook procedure for the Choose Font dialog box.",
@@ -607,7 +835,8 @@ dll_api_explanations = {
             "commdlg_update": "Forces an update of a common dialog box's interface.",
             "commdlg_destroy": "Destroys a common dialog box and frees its resources.",
             "commdlg_refresh": "Refreshes the contents of a common dialog box.",
-            "commdlg_finalize": "Finalizes the dialog box and applies any changes."
+            "commdlg_finalize": "Finalizes the dialog box and applies any changes.",
+            "getfiletitlea": "Retrieves the name of the file chosen in an Open or Save dialog (ANSI)."
         }
     },
     "gdi32.dll": {
@@ -662,7 +891,32 @@ dll_api_explanations = {
             "alphaBlend": "Performs alpha blending of source and destination bitmaps.",
             "gradientFill": "Fills an area with a gradient between colors.",
             "plgBlt": "Performs a bit-block transfer with parallelogram mapping.",
-            "setmapmode": "Sets the mapping mode for a device context."
+            "setmapmode": "Sets the mapping mode for a device context.",
+            "createrectrgnindirect": "Creates a rectangular region from a RECT structure.",
+            "escape": "Allows an application to access device capabilities not available through GDI.",
+            "extselectcliprgn": "Combines the specified region with the current clipping region.",
+            "getbkcolor": "Retrieves the current background color for the device context.",
+            "getclipbox": "Retrieves the dimensions of the bounding rectangle of the current clip region.",
+            "getmapmode": "Retrieves the current mapping mode for the device context.",
+            "getobjecta": "Retrieves information about a GDI object (ANSI).",
+            "getrgnbox": "Retrieves the bounding rectangle of a region.",
+            "gettextcolor": "Retrieves the current text color for the device context.",
+            "getviewportextex": "Retrieves the viewport extent for the device context.",
+            "getwindowextex": "Retrieves the window extent for the device context.",
+            "lineto": "Draws a line from the current position up to (but not including) a point.",
+            "movetoex": "Moves the current position to the specified coordinates.",
+            "offsetviewportorgex": "Modifies the viewport origin for a device context.",
+            "ptvisible": "Determines whether a point is within the current clipping region.",
+            "rectvisible": "Determines whether any part of a rectangle lies within the clipping region.",
+            "restoredc": "Restores a device context to a specified state.",
+            "savedc": "Saves the current device context state.",
+            "scaleviewportextex": "Modifies the viewport extent for a device context.",
+            "scalewindowextex": "Modifies the window extent for a device context.",
+            "setbkcolor": "Sets the current background color for the device context.",
+            "settextcolor": "Sets the current text color for the device context.",
+            "setviewportextex": "Sets the viewport extent for the device context.",
+            "setviewportorgex": "Sets the viewport origin for the device context.",
+            "setwindowextex": "Sets the window extent for the device context."
         }
     },
     "comctl32.dll": {
@@ -709,12 +963,13 @@ dll_api_explanations = {
             "keybd_event": "Synthesizes keystroke events.",
             "setwindowtheme": "Sets the visual theme of a window or control.",
             "updateuican": "Updates the user interface of a control (placeholder).",
-            "commctl32_api15": "Common control API placeholder for additional functionality.",
-            "commctl32_api16": "Common control API placeholder for additional functionality.",
-            "commctl32_api17": "Common control API placeholder for additional functionality.",
-            "commctl32_api18": "Common control API placeholder for additional functionality.",
-            "commctl32_api19": "Common control API placeholder for additional functionality.",
-            "commctl32_api20": "Common control API placeholder for additional functionality.",
+            "commctl32_api15": "Creates or manipulates a common control (toolbar, listview, treeview, etc.). See Microsoft documentation.",
+            "commctl32_api16": "Creates or manipulates a common control (toolbar, listview, treeview, etc.). See Microsoft documentation.",
+            "commctl32_api17": "Creates or manipulates a common control (toolbar, listview, treeview, etc.). See Microsoft documentation.",
+            "commctl32_api18": "Creates or manipulates a common control (toolbar, listview, treeview, etc.). See Microsoft documentation.",
+            "commctl32_api19": "Creates or manipulates a common control (toolbar, listview, treeview, etc.). See Microsoft documentation.",
+            "commctl32_api20": "Creates or manipulates a common control (toolbar, listview, treeview, etc.). See Microsoft documentation.",
+            "ordinal_17": "Common control function by ordinal (e.g. InitCommonControlsEx or similar). See Microsoft documentation.",
             "statusbar_seticon": "Sets an icon in a specified part of a status bar.",
             "toolbar_getbuttoninfo": "Retrieves information about a toolbar button.",
             "toolbar_setbuttoninfo": "Sets information for a toolbar button."
@@ -827,7 +1082,10 @@ dll_api_explanations = {
             "shlwapi_strreplace": "Replaces occurrences of a substring within a string.",
             "shlwapi_urlunescapeinplace": "Unescapes a URL in place.",
             "shlwapi_getextension": "Retrieves the extension of a file from a path.",
-            "shlwapi_changefileext": "Changes the file extension of a given path."
+            "shlwapi_changefileext": "Changes the file extension of a given path.",
+            "pathfindfilenamea": "Searches a path for the file name portion (ANSI).",
+            "pathisunca": "Determines if a path string is a valid UNC path (ANSI).",
+            "pathstriptoroota": "Removes the trailing file name and backslash from a path, leaving the root (ANSI)."
         }
     },
     "imm32.dll": {
@@ -1003,20 +1261,20 @@ dll_api_explanations = {
             "getmodulenamemodexa": "Retrieves the fully qualified path for a module (ANSI version).",
             "getmodulenamemodexw": "Retrieves the fully qualified path for a module (Unicode version).",
             "getmoduleinformation": "Retrieves information about a module in a process.",
-            "psapi_api7": DEFAULT_EXPLANATION,
-            "psapi_api8": DEFAULT_EXPLANATION,
-            "psapi_api9": DEFAULT_EXPLANATION,
-            "psapi_api10": DEFAULT_EXPLANATION,
-            "psapi_api11": DEFAULT_EXPLANATION,
-            "psapi_api12": DEFAULT_EXPLANATION,
-            "psapi_api13": DEFAULT_EXPLANATION,
-            "psapi_api14": DEFAULT_EXPLANATION,
-            "psapi_api15": DEFAULT_EXPLANATION,
-            "psapi_api16": DEFAULT_EXPLANATION,
-            "psapi_api17": DEFAULT_EXPLANATION,
-            "psapi_api18": DEFAULT_EXPLANATION,
-            "psapi_api19": DEFAULT_EXPLANATION,
-            "psapi_api20": DEFAULT_EXPLANATION,
+            "psapi_api7": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api8": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api9": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api10": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api11": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api12": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api13": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api14": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api15": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api16": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api17": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api18": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api19": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
+            "psapi_api20": "Retrieves or enumerates process or module information (PSAPI). See Microsoft documentation.",
             "getprocessmemoryinfo": "Retrieves memory usage information for a specified process.",
             "getperformanceinfo": "Retrieves performance information about the system.",
             "enumdevicedrivers": "Enumerates all loaded device drivers in the system.",
@@ -1066,12 +1324,12 @@ dll_api_explanations = {
             "setupdigetclassdevids": "Retrieves device instance IDs for a setup class.",
             "setupdiopendevinfoptr": "Opens a handle to a device information set.",
             "setupdidestroydevinfolist": "Destroys a device information set and frees its resources.",
-            "setupapi_api15": DEFAULT_EXPLANATION,
-            "setupapi_api16": DEFAULT_EXPLANATION,
-            "setupapi_api17": DEFAULT_EXPLANATION,
-            "setupapi_api18": DEFAULT_EXPLANATION,
-            "setupapi_api19": DEFAULT_EXPLANATION,
-            "setupapi_api20": DEFAULT_EXPLANATION,
+            "setupapi_api15": "Device installation or configuration helper (SetupAPI). See Microsoft documentation.",
+            "setupapi_api16": "Device installation or configuration helper (SetupAPI). See Microsoft documentation.",
+            "setupapi_api17": "Device installation or configuration helper (SetupAPI). See Microsoft documentation.",
+            "setupapi_api18": "Device installation or configuration helper (SetupAPI). See Microsoft documentation.",
+            "setupapi_api19": "Device installation or configuration helper (SetupAPI). See Microsoft documentation.",
+            "setupapi_api20": "Device installation or configuration helper (SetupAPI). See Microsoft documentation.",
             "setupapi_installdevice": "Installs a device using setup API routines.",
             "setupapi_uninstalldevice": "Uninstalls a device from the system.",
             "setupapi_enumeratedevices": "Enumerates devices present in the system.",
@@ -1110,23 +1368,23 @@ dll_api_explanations = {
             "getadaptersaddresses": "Retrieves network adapter addresses for the local system.",
             "getiftable": "Retrieves a table of network interface information.",
             "getifentry": "Retrieves information for a specified network interface.",
-            "iphlpapi_api4": DEFAULT_EXPLANATION,
-            "iphlpapi_api5": DEFAULT_EXPLANATION,
-            "iphlpapi_api6": DEFAULT_EXPLANATION,
-            "iphlpapi_api7": DEFAULT_EXPLANATION,
-            "iphlpapi_api8": DEFAULT_EXPLANATION,
-            "iphlpapi_api9": DEFAULT_EXPLANATION,
-            "iphlpapi_api10": DEFAULT_EXPLANATION,
-            "iphlpapi_api11": DEFAULT_EXPLANATION,
-            "iphlpapi_api12": DEFAULT_EXPLANATION,
-            "iphlpapi_api13": DEFAULT_EXPLANATION,
-            "iphlpapi_api14": DEFAULT_EXPLANATION,
-            "iphlpapi_api15": DEFAULT_EXPLANATION,
-            "iphlpapi_api16": DEFAULT_EXPLANATION,
-            "iphlpapi_api17": DEFAULT_EXPLANATION,
-            "iphlpapi_api18": DEFAULT_EXPLANATION,
-            "iphlpapi_api19": DEFAULT_EXPLANATION,
-            "iphlpapi_api20": DEFAULT_EXPLANATION,
+            "iphlpapi_api4": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api5": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api6": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api7": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api8": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api9": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api10": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api11": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api12": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api13": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api14": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api15": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api16": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api17": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api18": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api19": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
+            "iphlpapi_api20": "Retrieves or sets IP/network adapter configuration (IP Helper API). See Microsoft documentation.",
             "getnetworkparams": "Retrieves network parameters for the local system.",
             "getperadapterinfo": "Retrieves detailed information for a specific network adapter.",
             "getadapterordermap": "Retrieves the adapter order map for the system.",
@@ -1158,7 +1416,1024 @@ dll_api_explanations = {
             "getipaddr": "Retrieves the IP address for a network adapter.",
             "renewiplease": "Renews the IP lease for a network adapter."
         }
-    }
+    },
+    "winhttp.dll": {
+        "explanation": "HTTP client API for applications; alternative to WinINet with more control.",
+        "apis": {
+            "winhttpopen": "Opens a session for HTTP requests.",
+            "winhttpconnect": "Connects to an HTTP server.",
+            "winhttpopenrequest": "Opens an HTTP request handle.",
+            "winhttpsendrequest": "Sends the HTTP request.",
+            "winhttpreceiveresponse": "Receives the HTTP response.",
+            "winhttpquerydataavailable": "Queries the amount of data available to read.",
+            "winhttpreaddata": "Reads data from the HTTP response.",
+            "winhttpclosehandle": "Closes a WinHTTP handle.",
+            "winhttpsetoption": "Sets an option on a WinHTTP handle.",
+            "winhttpqueryheaders": "Queries HTTP response headers.",
+            "winhttpaddrequestheaders": "Adds request headers.",
+            "winhttpcreaterequest": "Creates an HTTP request handle.",
+            "winhttpcrackurl": "Parses a URL into its components.",
+            "winhttpcombineurl": "Combines a base and relative URL.",
+        }
+    },
+    "wincred.dll": {
+        "explanation": "Credential Manager API for storing and retrieving user credentials.",
+        "apis": {
+            "credread": "Reads a credential from the user's credential set.",
+            "credwrite": "Writes a credential to the user's credential set.",
+            "creddelete": "Deletes a credential from the user's credential set.",
+            "credenumerate": "Enumerates credentials in the user's credential set.",
+            "credfree": "Frees a buffer returned by the Credential Manager.",
+            "credgettargetinfo": "Retrieves the target information for a credential.",
+            "credpackcredentialsa": "Packs credentials for transmission (ANSI).",
+            "credunpackcredentialsw": "Unpacks credentials (Unicode).",
+        }
+    },
+    "dbghelp.dll": {
+        "explanation": "Debug Help Library for stack walking, symbol resolution, and minidump.",
+        "apis": {
+            "syminitialize": "Initializes the symbol handler for a process.",
+            "symcleanup": "Releases the symbol handler.",
+            "symloadmodule": "Loads module symbols.",
+            "symgetmoduleinfo": "Retrieves module information.",
+            "stackwalk": "Walks the stack frames.",
+            "symfunctiontableaccess": "Accesses the function table for a module.",
+            "symgetmodulebase": "Retrieves the base address of a module.",
+            "minidumpwritedump": "Writes a minidump file.",
+            "symfromaddr": "Retrieves symbol information for an address.",
+            "symgetlinefromaddr": "Retrieves source line information for an address.",
+            "undecoratesymbolname": "Undecorates a C++ decorated symbol name.",
+        }
+    },
+    "netapi32.dll": {
+        "explanation": "Network Management API for enumerating shares, sessions, and user/group info.",
+        "apis": {
+            "netshareenum": "Enumerates shared resources on a server.",
+            "netservergetinfo": "Retrieves information about a server.",
+            "netuserenum": "Enumerates user accounts.",
+            "netgroupenum": "Enumerates global groups.",
+            "netlocalgroupenum": "Enumerates local groups.",
+            "netwkstauserenum": "Enumerates logged-on users on a workstation.",
+            "netuseadd": "Connects to a network resource.",
+            "netusedel": "Disconnects a network connection.",
+            "dsgetdcnamea": "Retrieves the name of a domain controller (ANSI).",
+            "netgetjoininformation": "Retrieves join status of a computer.",
+            "netbios": "Performs NetBIOS operations.",
+        }
+    },
+    "wtsapi32.dll": {
+        "explanation": "Windows Terminal Services API for session and remote desktop management.",
+        "apis": {
+            "wtsenumsessions": "Enumerates sessions on a server.",
+            "wtsqueryusertoken": "Obtains the user token for a session.",
+            "wtssendmessage": "Sends a message to a client session.",
+            "wtsdisconnectsession": "Disconnects a session.",
+            "wtslogoffsession": "Logs off a session.",
+            "wtsquerysessioninformation": "Retrieves session information.",
+            "wtsenumerateprocesses": "Enumerates processes in sessions.",
+            "wtsvirtualchannelmanager": "Manages virtual channels (RDP).",
+        }
+    },
+    "userenv.dll": {
+        "explanation": "User environment profile and policy (e.g. Roaming Profile, Group Policy).",
+        "apis": {
+            "loaduserprofile": "Loads the user's registry hive (profile).",
+            "unloaduserprofile": "Unloads the user's registry hive.",
+            "getuserprofiledirectory": "Retrieves the path to the user's profile directory.",
+            "createenvironmentblock": "Creates an environment block for a user.",
+            "destroyenvironmentblock": "Destroys an environment block.",
+            "expandenvironmentstringsforuser": "Expands environment variables for a user.",
+            "registergpnotification": "Registers for Group Policy change notification.",
+            "profilesubload": "Loads a user profile (internal).",
+        }
+    },
+    "shellapi.dll": {
+        "explanation": "Shell helper APIs (different from shell32): drag-drop, file associations, taskbar.",
+        "apis": {
+            "shell_notifyicon": "Adds, modifies, or removes a taskbar notification icon.",
+            "dragacceptfiles": "Registers a window as a drop target for files.",
+            "dragqueryfile": "Retrieves file names from a drag-drop operation.",
+            "dragquerypoint": "Retrieves the drop point coordinates.",
+            "dragfinish": "Releases memory used for drag-drop.",
+            "extractassociatedicon": "Extracts an icon from a file or association.",
+            "findexecutable": "Finds the executable associated with a file.",
+            "assocquerystring": "Retrieves a string from the file association database.",
+            "commandlinetoargvw": "Parses a Unicode command line into argv-style array.",
+            "shgetfolderpath": "Gets the path of a known folder (deprecated; use SHGetKnownFolderPath).",
+        }
+    },
+    "imagehlp.dll": {
+        "explanation": "Image Helper API for image validation, checksums, and debug info.",
+        "apis": {
+            "mapandload": "Maps a PE image into memory for analysis.",
+            "unmapandload": "Unmaps an image loaded with MapAndLoad.",
+            "getimageconfiginformation": "Retrieves load config from a PE image.",
+            "imagedirectoryentrytodata": "Converts a directory entry to a data pointer.",
+            "imagerichtoheaders": "Converts RVA to file offset.",
+            "checksummappedfile": "Calculates a checksum of a mapped file.",
+            "stampfile": "Stamps a file with a checksum.",
+            "bindimage": "Updates bind information in an image.",
+            "bindimageex": "Extended bind of an image.",
+            "gettimestampforloadedlibrary": "Gets timestamp of a loaded module.",
+        }
+    },
+    "bcrypt.dll": {
+        "explanation": "Windows CNG (Cryptography Next Generation) for hashing and encryption.",
+        "apis": {
+            "bcryptopenalgorithmprovider": "Opens a handle to an algorithm provider.",
+            "bcryptclosealgorithmprovider": "Closes an algorithm provider handle.",
+            "bcryptgenrandom": "Generates random bytes.",
+            "bcryptgetproperty": "Retrieves a property of a CNG object.",
+            "bcryptcreatehash": "Creates a hash object.",
+            "bcrypthashdata": "Hashes data.",
+            "bcryptfinishhash": "Finalizes a hash and retrieves the result.",
+            "bcryptdestroyhash": "Destroys a hash object.",
+            "bcryptencrypt": "Encrypts a block of data.",
+            "bcryptdecrypt": "Decrypts a block of data.",
+            "bcryptgeneratesymmetrickey": "Generates a symmetric key.",
+            "bcryptdestroykey": "Destroys a key object.",
+            "bcryptduplicatehash": "Duplicates a hash object.",
+        }
+    },
+    "ncrypt.dll": {
+        "explanation": "CNG API for key storage and cryptographic operations (keys, certs).",
+        "apis": {
+            "ncryptopenstorageprovider": "Opens a key storage provider.",
+            "ncryptcreatepersistedkey": "Creates a persisted key.",
+            "ncryptopenkey": "Opens a key from the storage provider.",
+            "ncryptdeletekey": "Deletes a key.",
+            "ncryptencrypt": "Encrypts data with a key.",
+            "ncryptdecrypt": "Decrypts data with a key.",
+            "ncryptsignhash": "Signs a hash with a key.",
+            "ncryptverifysignature": "Verifies a signature.",
+            "ncryptfreeobject": "Frees an NCrypt handle.",
+            "ncryptgetproperty": "Gets a property of a key or provider.",
+            "ncryptsetproperty": "Sets a property.",
+            "ncryptexportkey": "Exports a key to a blob.",
+            "ncryptimportkey": "Imports a key from a blob.",
+        }
+    },
+    "powrprof.dll": {
+        "explanation": "Power profile API for system power state and sleep/hibernate.",
+        "apis": {
+            "setsuspendstate": "Suspends the system (sleep or hibernate).",
+            "getpowermanagementsetting": "Retrieves a power management setting.",
+            "setpowermanagementsetting": "Sets a power management setting.",
+            "enumeratepwrschemes": "Enumerates power schemes.",
+            "getactivepwrscheme": "Gets the active power scheme.",
+            "setactivepwrscheme": "Sets the active power scheme.",
+            "powerdetermineplatformrole": "Determines the platform role (e.g. desktop, laptop).",
+            "callntpowerinformation": "Calls NtPowerInformation (power info).",
+        }
+    },
+    "mpr.dll": {
+        "explanation": "Multiple Provider Router; WNet API for network connections and resources.",
+        "apis": {
+            "wnetaddconnection2": "Adds a connection to a network resource.",
+            "wnetcancelconnection2": "Cancels a network connection.",
+            "wnetopenenum": "Starts enumeration of network resources.",
+            "wnetenumresource": "Continues enumeration of network resources.",
+            "wnetcloseenum": "Closes an enumeration handle.",
+            "wnetgetconnection": "Retrieves the local name of a connected resource.",
+            "wnetgetuser": "Retrieves the user name used for a connection.",
+            "wnetgetuniversalname": "Retrieves the UNC name for a redirected local path.",
+            "multinetgetconnectionperformance": "Gets connection performance info.",
+        }
+    },
+    "sensapi.dll": {
+        "explanation": "System Event Notification Service API for network connectivity status.",
+        "apis": {
+            "isnetworkalive": "Determines whether the network is available.",
+            "isdestinationreachablea": "Checks if a destination (host/path) is reachable (ANSI).",
+            "isdestinationreachablew": "Checks if a destination is reachable (Unicode).",
+        }
+    },
+    "credui.dll": {
+        "explanation": "Credential UI for prompting user name and password.",
+        "apis": {
+            "creduipromptforcredentials": "Displays a credential dialog.",
+            "creduipromptforwindowscredentials": "Displays the Windows credential dialog.",
+            "creduiconfirmcredentials": "Confirms that credentials were valid.",
+            "creduiparseusername": "Parses a username string into domain and user.",
+        }
+    },
+    "clbcatq.dll": {
+        "explanation": "COM Library Catalog; resolves COM components and categories.",
+        "apis": {
+            "comcat": "COM category manager (internal).",
+            "clbgetcomponent": "Gets a component from the catalog.",
+            "clbenumcomponents": "Enumerates components in a category.",
+        }
+    },
+    "propsys.dll": {
+        "explanation": "Property System for reading/writing file and shell properties.",
+        "apis": {
+            "psgetpropertydescription": "Gets a property description by name.",
+            "psgetnamedpropertyfrompropertystorage": "Gets a property from storage.",
+            "pspropertystoragetowritestream": "Writes property storage to a stream.",
+            "initpropvariantfromstring": "Initializes a PROPVARIANT from a string.",
+            "propvariantclear": "Clears a PROPVARIANT.",
+        }
+    },
+    "rpcrt4.dll": {
+        "explanation": "Runtime library for RPC (Remote Procedure Call); used for DCOM and network RPC.",
+        "apis": {
+            "rpcstringbindingcompose": "Creates a string binding handle for RPC.",
+            "rpcstringbindingparse": "Parses a string binding into its components.",
+            "rpcbindresolvebinding": "Resolves a binding handle.",
+            "rpcbindfree": "Frees a binding handle.",
+            "rpcstringfree": "Frees a string returned by RPC.",
+            "uuidcreate": "Creates a new UUID.",
+            "uuidtostring": "Converts a UUID to a string.",
+            "uuidfromstring": "Converts a string to a UUID.",
+            "rpcserverregisterif": "Registers an interface with the RPC server.",
+            "rpcserverlisten": "Starts the RPC server listening.",
+            "rpcepresolvebinding": "Resolves an endpoint from a binding.",
+            "ndrolexecute": "Marshals or unmarshals RPC data (NDR).",
+        }
+    },
+    "urlmon.dll": {
+        "explanation": "URL Moniker API for downloading data from URLs and binding to storage.",
+        "apis": {
+            "urlopenstream": "Opens a stream from a URL.",
+            "urlopenblockingstream": "Opens a blocking stream from a URL.",
+            "urldownloadtofile": "Downloads a file from a URL to disk.",
+            "urldownloadtocachefile": "Downloads to the cache.",
+            "createurlmoniker": "Creates a URL moniker.",
+            "urlmonikergetdisplayname": "Gets the display name of a moniker.",
+            "cointernetgetsession": "Gets the Internet session for the process.",
+            "cointernetcreatebinding": "Creates a binding for async download.",
+            "findmimefromdata": "Determines MIME type from data.",
+            "obtainusagentstring": "Gets the user agent string.",
+            "revokebindstatuscallback": "Revokes a bind status callback.",
+            "registerbindstatuscallback": "Registers a bind status callback.",
+        }
+    },
+    "dnsapi.dll": {
+        "explanation": "DNS Client API for name resolution and DNS configuration.",
+        "apis": {
+            "dnsquery_a": "Queries DNS for records (ANSI).",
+            "dnsquery_w": "Queries DNS for records (Unicode).",
+            "dnsqueryconfig": "Queries DNS configuration.",
+            "dnsrecordlistfree": "Frees a DNS record list.",
+            "getaddrinfo": "Resolves host name to addresses (also in ws2_32).",
+            "freeaddrinfo": "Frees addrinfo from getaddrinfo.",
+            "dnsflushresolvercache": "Flushes the DNS resolver cache.",
+            "dnsvalidatename": "Validates a DNS or host name.",
+        }
+    },
+    "fwpuclnt.dll": {
+        "explanation": "Windows Filtering Platform (WFP) client API for firewall and network filtering.",
+        "apis": {
+            "fwpengineopen": "Opens the WFP engine handle.",
+            "fwpengineclose": "Closes the WFP engine handle.",
+            "fwpcalloutadd": "Adds a callout to the filter engine.",
+            "fwpfilteradd": "Adds a filter to the engine.",
+            "fwplayeradd": "Adds a layer.",
+            "fwpsublayeradd": "Adds a sublayer.",
+            "fwptransactionbegin": "Begins a WFP transaction.",
+            "fwptransactioncommit": "Commits a WFP transaction.",
+            "fwptransactionabort": "Aborts a WFP transaction.",
+        }
+    },
+    "wevtapi.dll": {
+        "explanation": "Windows Event Log API for reading and subscribing to events.",
+        "apis": {
+            "evtquery": "Queries events from a channel or log file.",
+            "evtnext": "Gets the next event from a query result.",
+            "evtclose": "Closes an event or result handle.",
+            "evtopenlog": "Opens a channel or log file.",
+            "evtcreaterendercontext": "Creates a render context for formatting.",
+            "evtrend": "Renders an event as XML or structured data.",
+            "evtsubscribe": "Subscribes to events (real-time).",
+            "evtseek": "Seeks to a position in a result set.",
+            "evtgetqueryinfo": "Gets query result set info.",
+        }
+    },
+    "wintrust.dll": {
+        "explanation": "Trust verification API for authenticode, catalogs, and certificate verification.",
+        "apis": {
+            "winverifytrust": "Verifies the trust of an object (file, catalog, etc.).",
+            "wintrustaddactionid": "Adds an action ID for policy.",
+            "wintrustremoveactionid": "Removes an action ID.",
+            "wthhelpproviderfromusages": "Gets a provider for usages.",
+            "cryptcatadmincalchashfromfilehandle": "Calculates hash from file for catalog.",
+            "cryptcatadminaddcatalog": "Adds a catalog to the database.",
+            "cryptcatadminremovecatalog": "Removes a catalog.",
+        }
+    },
+    "cryptsp.dll": {
+        "explanation": "Cryptographic Service Provider API; lower-level crypto than advapi32 CryptoAPI.",
+        "apis": {
+            "cryptacquirecontexta": "Acquires a CSP context (ANSI).",
+            "cryptacquirecontextw": "Acquires a CSP context (Unicode).",
+            "cryptreleasecontext": "Releases a CSP context.",
+            "cryptcreatehash": "Creates a hash object.",
+            "crypthashdata": "Hashes data.",
+            "cryptgethashparam": "Gets hash parameters or value.",
+            "cryptdestroyhash": "Destroys a hash object.",
+            "cryptgetprovparam": "Gets CSP parameters.",
+            "cryptsetprovparam": "Sets CSP parameters.",
+        }
+    },
+    "cryptui.dll": {
+        "explanation": "Cryptographic UI for certificate dialogs and trust UI.",
+        "apis": {
+            "cryptuidlgviewcertificate": "Displays a certificate view dialog.",
+            "cryptuidlgviewsignerinfo": "Displays signer info dialog.",
+            "cryptuidlgstoreprovider": "Selects a store provider.",
+            "cryptuiselectcertificatefromstore": "Certificate selection dialog.",
+            "cryptuidlgcertmgr": "Certificate manager dialog.",
+        }
+    },
+    "msi.dll": {
+        "explanation": "Windows Installer API for installing, configuring, and removing software.",
+        "apis": {
+            "msiinstallproduct": "Installs a product from an MSI package.",
+            "msiconfigureproduct": "Configures an installed product.",
+            "msiopenpackage": "Opens an MSI package for querying.",
+            "msiopenproduct": "Opens an installed product.",
+            "msigetproductinfo": "Gets product information.",
+            "msienumproducts": "Enumerates installed products.",
+            "msienumfeatures": "Enumerates features of a product.",
+            "msiqueryproductstate": "Queries the install state of a product.",
+            "msiapplypatch": "Applies a patch (MSP).",
+            "msidatabaseopenview": "Opens a database view for query.",
+            "msiviewexecute": "Executes a view.",
+            "msiclosehandle": "Closes an MSI handle.",
+        }
+    },
+    "winmm.dll": {
+        "explanation": "Multimedia API (WinMM) for audio, timers, and joystick.",
+        "apis": {
+            "timegettime": "Gets system time in milliseconds (often used for timing).",
+            "timegetdevcaps": "Gets timer device capabilities.",
+            "timesetevent": "Sets a periodic timer event.",
+            "timekillevent": "Kills a timer event.",
+            "waveoutopen": "Opens a waveform output device.",
+            "waveoutwrite": "Writes waveform data.",
+            "waveoutclose": "Closes waveform output.",
+            "midioutopen": "Opens a MIDI output device.",
+            "playsound": "Plays a sound from file or resource.",
+            "sndplaysounda": "Plays a sound (ANSI).",
+        }
+    },
+    "uxtheme.dll": {
+        "explanation": "Windows visual styles (themes) API for drawing themed controls.",
+        "apis": {
+            "setthemeappproperties": "Sets theme application properties.",
+            "getthemeappproperties": "Gets theme application properties.",
+            "openthemedata": "Opens theme data for a window.",
+            "closethemedata": "Closes theme data.",
+            "drawthemebackground": "Draws themed background.",
+            "drawthemetext": "Draws themed text.",
+            "getthemecolor": "Gets a theme color.",
+            "setwindowtheme": "Sets the theme for a window.",
+            "isappthemed": "Checks if the app is themed.",
+        }
+    },
+    "dwmapi.dll": {
+        "explanation": "Desktop Window Manager API for composition and window effects.",
+        "apis": {
+            "dwmenablecomposition": "Enables or disables DWM composition.",
+            "dwmiscompositionenabled": "Checks if composition is enabled.",
+            "dwmextendframeintoclientarea": "Extends the frame into client area (Aero).",
+            "dwmsetwindowattribute": "Sets a window attribute.",
+            "dwmgetwindowattribute": "Gets a window attribute.",
+            "dwmflush": "Flushes the composition.",
+            "dwmgetcompositiontiminginfo": "Gets composition timing info.",
+        }
+    },
+    "shcore.dll": {
+        "explanation": "Shell core API for DPI, paths, and shell utilities (Vista+).",
+        "apis": {
+            "setprocessdpiaware": "Sets the process as DPI-aware.",
+            "getdpiforscreen": "Gets DPI for a screen.",
+            "getscalefactorformonitor": "Gets scale factor for a monitor.",
+            "getprocessdpiawareness": "Gets process DPI awareness.",
+            "setprocessdpiawareness": "Sets process DPI awareness.",
+            "pathcreatefromurl": "Creates a path from a URL.",
+            "pathcreatefromurlalloc": "Creates a path from URL (allocated).",
+        }
+    },
+    "odbc32.dll": {
+        "explanation": "ODBC driver manager for database connectivity.",
+        "apis": {
+            "sqlallochandle": "Allocates an ODBC handle.",
+            "sqlfreehandle": "Frees an ODBC handle.",
+            "sqlconnect": "Connects to a data source.",
+            "sqlexecdirect": "Executes a statement directly.",
+            "sqlprepare": "Prepares a statement.",
+            "sqlexecute": "Executes a prepared statement.",
+            "sqlfetch": "Fetches a row.",
+            "sqlgetdata": "Gets data from a column.",
+            "sqldriverconnect": "Connects using a connection string.",
+            "sqlbindparameter": "Binds a parameter.",
+        }
+    },
+    "rasapi32.dll": {
+        "explanation": "Remote Access Service (RAS) API for dial-up and VPN connections.",
+        "apis": {
+            "rasdial": "Initiates a RAS connection.",
+            "rashangup": "Hangs up a RAS connection.",
+            "rasenumconnections": "Enumerates RAS connections.",
+            "rasgetconnectstatus": "Gets connection status.",
+            "rasenumentries": "Enumerates RAS phone book entries.",
+            "rasgetentrydialparams": "Gets dial parameters for an entry.",
+            "rassetentrydialparams": "Sets dial parameters.",
+            "rascreatephonebookentry": "Creates a phone book entry.",
+        }
+    },
+    "authz.dll": {
+        "explanation": "Authorization API for access checks and security context.",
+        "apis": {
+            "authzinitializeresourcemanager": "Initializes the resource manager.",
+            "authzfreeresourcemanager": "Frees the resource manager.",
+            "authzaccesscheck": "Performs an access check.",
+            "authzgetinformationfromcontext": "Gets information from a context.",
+            "authzinitializecontextfromsid": "Initializes context from a SID.",
+            "authzfreecontext": "Frees an authz context.",
+            "authzcachedaccesscheck": "Cached access check.",
+        }
+    },
+    "aclui.dll": {
+        "explanation": "Security descriptor and ACL UI for property sheets.",
+        "apis": {
+            "editsecurity": "Displays the security descriptor editor.",
+            "createecuritypage": "Creates a security property page.",
+            "isecuritypagevisible": "Checks if security page is visible.",
+        }
+    },
+    "cabinet.dll": {
+        "explanation": "Cabinet (CAB) file API for compression and extraction.",
+        "apis": {
+            "fdicreate": "Creates an FDI context for extraction.",
+            "fdidestroy": "Destroys an FDI context.",
+            "fdicopy": "Extracts files from a cabinet.",
+            "fcicreate": "Creates an FCI context for creation.",
+            "fciclose": "Closes a cabinet being created.",
+            "fcifileadd": "Adds a file to a cabinet.",
+        }
+    },
+    "comsvcs.dll": {
+        "explanation": "COM+ Services; distributed transactions and queued components.",
+        "apis": {
+            "cotinitialize": "Initializes COM for the thread.",
+            "cotuninitialize": "Uninitializes COM.",
+            "getobjectcontext": "Gets the object context (COM+).",
+            "safeintransaction": "Checks if call is in a transaction.",
+            "recyclecontext": "Recycles the context.",
+            "gettriggersstring": "Gets trigger string (COM+).",
+        }
+    },
+    "dsrole.dll": {
+        "explanation": "Directory Services role API for domain/forest role information.",
+        "apis": {
+            "dsrolegetprimarydomaininformation": "Gets primary domain information.",
+            "dsrolefreememory": "Frees memory from DS role APIs.",
+        }
+    },
+    "samlib.dll": {
+        "explanation": "SAM (Security Account Manager) API for local account enumeration.",
+        "apis": {
+            "samenumdomains": "Enumerates domains on the machine.",
+            "samenumusers": "Enumerates users in a domain.",
+            "samopenuser": "Opens a user account.",
+            "samqueryinformationuser": "Queries user information.",
+            "samclosehandle": "Closes a SAM handle.",
+            "samconnect": "Connects to the SAM database.",
+            "samlookupnamesinsid": "Looks up names to SIDs.",
+        }
+    },
+    "schannel.dll": {
+        "explanation": "Secure Channel (TLS/SSL) API for encrypted communication.",
+        "apis": {
+            "acquirecredentialshandle": "Acquires a credential handle for Schannel.",
+            "initializesecuritycontext": "Initiates or continues a TLS handshake.",
+            "deletesecuritycontext": "Deletes a security context.",
+            "freecredentialshandle": "Frees a credential handle.",
+            "encryptmessage": "Encrypts a message.",
+            "decryptmessage": "Decrypts a message.",
+            "querycontextattributes": "Queries context attributes.",
+        }
+    },
+    "wldap32.dll": {
+        "explanation": "LDAP client API for directory services (Active Directory, etc.).",
+        "apis": {
+            "ldap_init": "Initializes an LDAP session.",
+            "ldap_connect": "Connects to an LDAP server.",
+            "ldap_bind_s": "Binds to the directory (synchronous).",
+            "ldap_search_s": "Searches the directory (sync).",
+            "ldap_unbind_s": "Unbinds and closes the connection.",
+            "ldap_get_values": "Gets values from an entry.",
+            "ldap_value_free": "Frees values from ldap_get_values.",
+            "ldap_msgfree": "Frees an LDAP message.",
+            "ldap_err2string": "Converts error code to string.",
+        }
+    },
+    "wmi.dll": {
+        "explanation": "WMI (Windows Management Instrumentation) provider helper.",
+        "apis": {
+            "wmiqueryalldata": "Queries all data for a WMI class.",
+            "wmiquerysingledata": "Queries single instance data.",
+            "wmienumclasses": "Enumerates WMI classes.",
+            "wmifreebuffer": "Frees WMI buffer.",
+        }
+    },
+    "winspool.drv": {
+        "explanation": "Print spooler API for printing and printer management.",
+        "apis": {
+            "openprinter": "Opens a printer handle.",
+            "openprintera": "Opens a printer handle (ANSI).",
+            "documentpropertiesa": "Retrieves or modifies printer configuration (ANSI).",
+            "closeprinter": "Closes a printer handle.",
+            "startdocprinter": "Starts a print job.",
+            "enddocprinter": "Ends a print job.",
+            "startpageprinter": "Starts a page.",
+            "endpageprinter": "Ends a page.",
+            "writeprinter": "Writes data to the printer.",
+            "enumprinters": "Enumerates printers.",
+            "getprinter": "Gets printer information.",
+            "setprinter": "Sets printer information.",
+            "addprinter": "Adds a printer.",
+            "deleteprinter": "Deletes a printer.",
+        }
+    },
+    "qmgr.dll": {
+        "explanation": "BITS (Background Intelligent Transfer Service) queue manager.",
+        "apis": {
+            "bitscreatejob": "Creates a BITS transfer job.",
+            "bitsaddfile": "Adds a file to a BITS job.",
+            "bitsresumejob": "Resumes a BITS job.",
+            "bitssuspendjob": "Suspends a BITS job.",
+            "bitscompletejob": "Completes a BITS job.",
+            "bitscanceljob": "Cancels a BITS job.",
+            "bitsgetjobstate": "Gets the state of a BITS job.",
+            "bitsgetjobowner": "Gets the owner of a BITS job.",
+        }
+    },
+    "srclient.dll": {
+        "explanation": "System Restore client API for restore points.",
+        "apis": {
+            "srrestorepoint": "Creates a restore point.",
+            "srremoverestorepoint": "Removes a restore point.",
+            "srsetrestorepointa": "Sets a restore point (ANSI).",
+            "srsetrestorepointw": "Sets a restore point (Unicode).",
+        }
+    },
+    "srvcli.dll": {
+        "explanation": "Server service client API for file and print sharing.",
+        "apis": {
+            "netserverenum": "Enumerates servers in the network.",
+            "netshareenum": "Enumerates shares on a server.",
+            "netsharegetinfo": "Gets share information.",
+            "netconnectionenum": "Enumerates connections to a share.",
+            "netfilesenum": "Enumerates open files.",
+            "netremotetod": "Converts remote path to local path.",
+        }
+    },
+    "profapi.dll": {
+        "explanation": "User profile API for profile load/unload and policy.",
+        "apis": {
+            "profiledeleteusername": "Deletes a user profile.",
+            "profileloaduserprofile": "Loads a user profile.",
+            "profileunloaduserprofile": "Unloads a user profile.",
+            "getuserprofiledirectoryw": "Gets the user profile directory.",
+            "createenvironmentblock": "Creates environment block for a user.",
+            "destroyenvironmentblock": "Destroys an environment block.",
+        }
+    },
+    "oleacc.dll": {
+        "explanation": "MSAA (Microsoft Active Accessibility) for UI automation and accessibility.",
+        "apis": {
+            "createstdaccessibleobject": "Creates a standard accessible object.",
+            "createStdaccessibleobject": "Creates a standard accessible object.",
+            "lresultfromobject": "Converts an IAccessible interface pointer to an LRESULT for returning from a window procedure.",
+            "accessibleobjectfromwindow": "Gets IAccessible from a window.",
+            "accessibleobjectfrompoint": "Gets IAccessible at a point.",
+            "windowfromaccessibleobject": "Gets window from IAccessible.",
+            "getroletext": "Gets the role text for a role ID.",
+            "getstatetext": "Gets the state text for a state.",
+        }
+    },
+    "usp10.dll": {
+        "explanation": "Uniscribe API for complex script and text layout (e.g. RTL, ligatures).",
+        "apis": {
+            "scriptitemize": "Itemizes a string into script runs.",
+            "scriptlayout": "Gets layout (RTL/LTR) for runs.",
+            "scriptshape": "Shapes glyphs for script runs.",
+            "scriptplace": "Places glyphs.",
+            "scripttextout": "Outputs shaped text.",
+            "scriptfreecache": "Frees the script cache.",
+            "scriptgetcmap": "Gets character map.",
+            "scriptgetproperties": "Gets script properties.",
+        }
+    },
+    "msctf.dll": {
+        "explanation": "Text Services Framework for input method and text processing.",
+        "apis": {
+            "tfcreateinputprocessorprofiles": "Creates input processor profiles.",
+            "tfcreatethreadmgr": "Creates a thread manager.",
+            "tfcreatedisplayattributeprovider": "Creates display attribute provider.",
+            "tfgetcompartments": "Gets compartments (TSF).",
+            "tfactivate": "Activates TSF.",
+            "tfdeactivate": "Deactivates TSF.",
+        }
+    },
+    "gdiplus.dll": {
+        "explanation": "GDI+ for advanced 2D graphics, images, and text.",
+        "apis": {
+            "gdipcreatebitmapfromfile": "Creates a bitmap from a file.",
+            "gdipcreatebitmapfromstream": "Creates a bitmap from a stream.",
+            "gdipdrawimage": "Draws an image.",
+            "gdipcreatefromhdc": "Creates a Graphics from an HDC.",
+            "gdipdeletegraphics": "Deletes a Graphics object.",
+            "gdipdeletebitmap": "Deletes a bitmap.",
+            "gdipcreatesolidfill": "Creates a solid brush.",
+            "gdipfillrectangle": "Fills a rectangle.",
+            "gdipdrawrectangle": "Draws a rectangle.",
+            "gdipcreatefontfamilyfromname": "Creates a font family.",
+            "gdipdrawstring": "Draws a string.",
+            "gdipgetimageencoders": "Gets available image encoders.",
+            "gdipsaveimagetofile": "Saves an image to a file.",
+        }
+    },
+    "activeds.dll": {
+        "explanation": "Active Directory Service Interfaces (ADSI) for directory access.",
+        "apis": {
+            "adsobject": "Creates an ADSI object (internal).",
+            "adsobjectget": "Gets an ADSI object.",
+            "adsbuildenumerator": "Builds an enumerator.",
+            "adsbuildpath": "Builds an ADSI path.",
+            "adsfreenotifyobject": "Frees a notify object.",
+            "adsgetobject": "Gets an object by path.",
+            "adsopenobject": "Opens an object with credentials.",
+        }
+    },
+    "logoncli.dll": {
+        "explanation": "Netlogon client for domain logon and secure channel.",
+        "apis": {
+            "netlogongetdomaininfo": "Gets domain information.",
+            "netlogonlogonsamlogon": "Performs Netlogon (sam logon).",
+            "netlogonlogon netservergettrustinfo": "Gets trust info.",
+            "dsgetdcnamea": "Gets domain controller name (ANSI).",
+            "dsgetdcnamew": "Gets domain controller name (Unicode).",
+            "netapinetbufferfree": "Frees NetAPI buffer.",
+        }
+    },
+    "mswsock.dll": {
+        "explanation": "Microsoft Winsock service provider (layered over ws2_32).",
+        "apis": {
+            "connectex": "Extended connect (overlapped).",
+            "acceptex": "Extended accept (overlapped).",
+            "getacceptexsockaddrs": "Gets addresses from AcceptEx.",
+            "transmitfile": "Sends a file over a socket.",
+            "transmitpackets": "Transmits packets.",
+            "wsarecvmsg": "Receives a message (also in ws2_32).",
+        }
+    },
+    "ntmarta.dll": {
+        "explanation": "NT Mart (security) API for object name resolution and security.",
+        "apis": {
+            "accgetaccess": "Gets access to an object.",
+            "accfreelogonrights": "Frees logon rights.",
+        }
+    },
+    "gpapi.dll": {
+        "explanation": "Group Policy API for reading policy settings.",
+        "apis": {
+            "getgpolista": "Gets the GPO list for a user/computer (ANSI).",
+            "getgpolistw": "Gets the GPO list (Unicode).",
+            "processgrouppolicy": "Processes group policy.",
+            "freegpolista": "Frees GPO list (ANSI).",
+            "freegpolistw": "Frees GPO list (Unicode).",
+        }
+    },
+    "slc.dll": {
+        "explanation": "Software Licensing Client for activation and license validation.",
+        "apis": {
+            "slgetwindowsinformation": "Gets Windows licensing information.",
+            "slgetlicensingstatusinformation": "Gets licensing status.",
+            "slgetproductskuinformation": "Gets product SKU information.",
+            "slgetreferralinformation": "Gets referral information.",
+        }
+    },
+    "portabledeviceapi.dll": {
+        "explanation": "Windows Portable Devices API for cameras, phones, media players.",
+        "apis": {
+            "portabledeviceenumerate": "Enumerates portable devices.",
+            "portabledeviceopen": "Opens a device.",
+            "portabledevicegetcontent": "Gets content from a device.",
+            "portabledeviceread": "Reads data from a device.",
+            "portabledevicewrite": "Writes data to a device.",
+            "portabledeviceclose": "Closes a device.",
+        }
+    },
+    "iertutil.dll": {
+        "explanation": "Internet Explorer runtime utility library.",
+        "apis": {
+            "ierterror": "IE error helper.",
+            "ierrordlg": "IE error dialog.",
+        }
+    },
+    "kernelbase.dll": {
+        "explanation": "Kernel base API set (Vista+); many kernel32-style APIs forward here.",
+        "apis": {
+            "getcurrentprocess": "Returns pseudo-handle for current process.",
+            "getcurrentthread": "Returns pseudo-handle for current thread.",
+            "getlasterror": "Retrieves last error code.",
+            "setlasterror": "Sets last error code.",
+            "debugbreak": "Causes a breakpoint exception.",
+            "outputdebugstringa": "Sends a string to the debugger (ANSI).",
+            "outputdebugstringw": "Sends a string to the debugger (Unicode).",
+            "getmodulehandleexw": "Gets module handle (Unicode, extended).",
+            "getprocaddress": "Gets address of an exported function.",
+            "loadlibraryexw": "Loads a DLL (Unicode, extended).",
+            "freelibrary": "Frees a loaded DLL.",
+            "virtualalloc": "Reserves or commits virtual memory.",
+            "virtualfree": "Releases virtual memory.",
+            "createthread": "Creates a thread.",
+        }
+    },
+    "sspicli.dll": {
+        "explanation": "SSPI client library; used for authentication (NTLM, Kerberos).",
+        "apis": {
+            "initsecurityinterfacea": "Initializes security interface (ANSI).",
+            "initsecurityinterfacew": "Initializes security interface (Unicode).",
+            "acquirecredentialshandlea": "Acquires credentials (ANSI).",
+            "initializesecuritycontexta": "Initiates security context (ANSI).",
+            "deletesecuritycontext": "Deletes a security context.",
+            "freecredentialshandle": "Frees credential handle.",
+            "encryptmessage": "Encrypts a message.",
+            "decryptmessage": "Decrypts a message.",
+        }
+    },
+    "rsaenh.dll": {
+        "explanation": "RSA Enhanced CSP for cryptographic operations.",
+        "apis": {
+            "cryptacquirecontexta": "Acquires CSP context (ANSI).",
+            "cryptacquirecontextw": "Acquires CSP context (Unicode).",
+            "cryptreleasecontext": "Releases context.",
+            "cryptcreatehash": "Creates a hash object.",
+            "crypthashdata": "Hashes data.",
+            "cryptdestroyhash": "Destroys hash.",
+            "cryptencrypt": "Encrypts data.",
+            "cryptdecrypt": "Decrypts data.",
+            "cryptgenkey": "Generates a key.",
+            "cryptexportkey": "Exports a key.",
+            "cryptimportkey": "Imports a key.",
+        }
+    },
+    "dhcpcsvc.dll": {
+        "explanation": "DHCP client service API for IP configuration.",
+        "apis": {
+            "dhcprequestparams": "Requests parameters from DHCP server.",
+            "dhcpregisterparam": "Registers a parameter.",
+            "dhcpderegisterparam": "Deregisters a parameter.",
+            "dhcpcsvcinitialize": "Initializes DHCP client.",
+            "dhcpcsvccleanup": "Cleans up DHCP client.",
+        }
+    },
+    "nlaapi.dll": {
+        "explanation": "Network Location Awareness API for network connectivity and profile.",
+        "apis": {
+            "nlagetconnectivity": "Gets connectivity type (internet, domain, etc.).",
+            "nlagetconnectivityex": "Gets extended connectivity.",
+        }
+    },
+    "fltlib.dll": {
+        "explanation": "Filter Manager API for minifilter drivers and file system filtering.",
+        "apis": {
+            "filterattach": "Attaches a filter to a volume.",
+            "filterdetach": "Detaches a filter.",
+            "filterfindfirst": "Finds first filter.",
+            "filterfindnext": "Finds next filter.",
+            "filtergetinformation": "Gets filter information.",
+            "filterconnectcommunicationport": "Connects to a filter communication port.",
+            "filtersendmessage": "Sends a message to a filter.",
+        }
+    },
+    "evr.dll": {
+        "explanation": "Enhanced Video Renderer for DirectShow/Media Foundation.",
+        "apis": {
+            "mferrorregister": "Registers MFR error.",
+            "mfcreatemediatype": "Creates a media type.",
+            "mfcreatemediatypefrompmf": "Creates media type from PMF.",
+        }
+    },
+    "d3d9.dll": {
+        "explanation": "Direct3D 9 API for 3D graphics.",
+        "apis": {
+            "direct3dcreate9": "Creates IDirect3D9 interface.",
+            "direct3dcreate9ex": "Creates IDirect3D9Ex (extended).",
+        }
+    },
+    "shfolder.dll": {
+        "explanation": "Shell folder helper for known folder paths (legacy; prefer shcore/shell32).",
+        "apis": {
+            "shgetfolderpatha": "Gets path of a known folder (ANSI).",
+            "shgetfolderpathw": "Gets path of a known folder (Unicode).",
+        }
+    },
+    "odbccp32.dll": {
+        "explanation": "ODBC installer and configuration.",
+        "apis": {
+            "sqlconfigdatasource": "Configures a data source.",
+            "sqlinstallodbc": "Installs ODBC components.",
+            "sqlremoveodbc": "Removes ODBC components.",
+            "sqlgetinstalleddrivers": "Gets list of installed drivers.",
+            "sqlwritedsntoini": "Writes DSN to ini.",
+            "sqlreaddsnfromini": "Reads DSN from ini.",
+        }
+    },
+    "pstorec.dll": {
+        "explanation": "Protected Storage (PStore) for storing credentials (legacy).",
+        "apis": {
+            "pstorecreateinstance": "Creates a PStore instance.",
+            "pstorenumtypes": "Enumerates types.",
+            "pstorenumitems": "Enumerates items.",
+            "pstorereaditem": "Reads an item.",
+            "pstorewriteitem": "Writes an item.",
+            "pstoredeleteitem": "Deletes an item.",
+        }
+    },
+    "esent.dll": {
+        "explanation": "Extensible Storage Engine (ESE); used by Windows Search, Active Directory, and apps.",
+        "apis": {
+            "jetcreateinstance": "Creates a JET instance.",
+            "jetinitsql": "Initializes the database engine.",
+            "jettermin": "Shuts down the database engine.",
+            "jetcreatedatabase": "Creates a database file.",
+            "jetopendatabase": "Opens a database.",
+            "jetbeginsession": "Begins a session.",
+            "jetopentable": "Opens a table.",
+            "jetmovenext": "Moves to next record.",
+            "jetretrievecolumn": "Retrieves a column value.",
+            "jetclose": "Closes a handle.",
+            "jetcommittransaction": "Commits a transaction.",
+            "jetrollback": "Rolls back a transaction.",
+        }
+    },
+    "loadperf.dll": {
+        "explanation": "Performance counter loading; loads/unloads performance counter DLLs.",
+        "apis": {
+            "loadperfcountersfromstringw": "Loads performance counters from string (Unicode).",
+            "unloadperfcountersfromstringw": "Unloads performance counters from string.",
+            "lodctr": "Loads performance counters (legacy).",
+            "unlodctr": "Unloads performance counters (legacy).",
+        }
+    },
+    "mgmtapi.dll": {
+        "explanation": "SNMP Management API for Simple Network Management Protocol.",
+        "apis": {
+            "snmpmgropen": "Opens a session to an SNMP agent.",
+            "snmpmgrclose": "Closes an SNMP session.",
+            "snmpmgrrequest": "Sends an SNMP request.",
+            "snmpmgrgettrap": "Gets a trap (async).",
+            "snmpmgrstrtooid": "Converts string OID to binary.",
+            "snmpmgroidtostr": "Converts OID to string.",
+        }
+    },
+    "netmsg.dll": {
+        "explanation": "Net message API for sending Alerter/Message service messages.",
+        "apis": {
+            "netmessagebuffersend": "Sends a message to a computer or user.",
+            "netmessagenameadd": "Adds a message alias.",
+            "netmessagenameenum": "Enumerates message aliases.",
+            "netmessagenamedel": "Deletes a message alias.",
+        }
+    },
+    "sfc_os.dll": {
+        "explanation": "Windows File Protection / System File Checker; protects critical system files.",
+        "apis": {
+            "sfcgetnextprotectedfile": "Gets next protected file.",
+            "sfcisfileprotected": "Checks if a file is protected.",
+            "sfcclose": "Closes SFC handle.",
+            "sfcconnect": "Connects to SFC (legacy).",
+        }
+    },
+    "xpsprint.dll": {
+        "explanation": "XPS Document API for XPS printing and document handling.",
+        "apis": {
+            "startxpsprintjob": "Starts an XPS print job.",
+            "writexpsstream": "Writes XPS to a stream.",
+            "parseprintticket": "Parses a print ticket.",
+        }
+    },
+    "clfsw32.dll": {
+        "explanation": "Common Log File System (CLFS) for high-performance logging.",
+        "apis": {
+            "createlogfile": "Creates or opens a CLFS log.",
+            "addlogcontainer": "Adds a log container.",
+            "readlogrecord": "Reads a log record.",
+            "writelogrecord": "Writes a log record.",
+            "readlogrestartarea": "Reads restart area.",
+            "writelogrestartarea": "Writes restart area.",
+            "closelogfile": "Closes a log file.",
+        }
+    },
+    "msimg32.dll": {
+        "explanation": "GDI+ legacy; gradient and alpha-blending (GradientFill, TransparentBlt).",
+        "apis": {
+            "gradientfill": "Fills area with gradient.",
+            "transparentblt": "BitBlt with color key transparency.",
+            "alphablend": "Alpha-blends bitmaps.",
+            "vggradientfill": "Gradient fill (Vista).",
+        }
+    },
+    "normaliz.dll": {
+        "explanation": "Unicode normalization (NLS); normalizes Unicode strings.",
+        "apis": {
+            "normalizestring": "Normalizes a Unicode string.",
+            "isnormalizedstring": "Checks if a string is normalized.",
+        }
+    },
+    "cscapi.dll": {
+        "explanation": "Offline Files (Client-Side Caching) API.",
+        "apis": {
+            "offlinefilesquery": "Queries offline files status.",
+            "offlinefilesenable": "Enables offline files.",
+            "offlinefilesstart": "Starts the CSC service.",
+            "offlinefilespin": "Pins files for offline use.",
+            "offlinefilesunpin": "Unpins files.",
+        }
+    },
+    "wlanapi.dll": {
+        "explanation": "Native WLAN API for wireless network management.",
+        "apis": {
+            "wlanopenhandle": "Opens a WLAN client handle.",
+            "wlanclosehandle": "Closes the handle.",
+            "wlanenuminterfaces": "Enumerates WLAN interfaces.",
+            "wlangetavailablenetworklist": "Gets list of available networks.",
+            "wlanconnect": "Connects to a network.",
+            "wlandisconnect": "Disconnects.",
+            "wlanqueryinterface": "Queries interface state.",
+            "wlanscan": "Initiates a scan.",
+        }
+    },
+    "winusb.dll": {
+        "explanation": "WinUSB API for generic USB device access (user-mode).",
+        "apis": {
+            "winusb_initialize": "Initializes WinUSB for a device.",
+            "winusb_free": "Frees a WinUSB handle.",
+            "winusb_getassociatedinterface": "Gets associated interface.",
+            "winusb_queryinterfacesettings": "Queries interface settings.",
+            "winusb_setcurrentalternatesetting": "Sets alternate setting.",
+            "winusb_writepipe": "Writes to a pipe.",
+            "winusb_readpipe": "Reads from a pipe.",
+            "winusb_controltransfer": "Performs control transfer.",
+        }
+    },
+    "hid.dll": {
+        "explanation": "HID (Human Interface Device) API for keyboards, mice, game controllers.",
+        "apis": {
+            "hidopen": "Opens a HID device.",
+            "hidgetproductstring": "Gets product string.",
+            "hidgetmanufacturerstring": "Gets manufacturer string.",
+            "hidgetvendorid": "Gets vendor ID.",
+            "hidgetproductid": "Gets product ID.",
+            "hidgetfeature": "Gets a feature report.",
+            "hidsetfeature": "Sets a feature report.",
+        }
+    },
+    "amsi.dll": {
+        "explanation": "Antimalware Scan Interface; allows AV to scan script/content in-process.",
+        "apis": {
+            "amsiinitialize": "Initializes AMSI for the process.",
+            "amsiuninitialize": "Uninitializes AMSI.",
+            "amsicontextcreate": "Creates an AMSI context.",
+            "amsicontextclose": "Closes an AMSI context.",
+            "amsiscanbuffer": "Scans a buffer for malware.",
+            "amsiscanstring": "Scans a string.",
+        }
+    },
+    "apphelp.dll": {
+        "explanation": "Application Compatibility (AppCompat) shim engine.",
+        "apis": {
+            "apphelpchecksum": "Checks compatibility database.",
+            "sdbgetapppatchdir": "Gets AppPatch directory.",
+            "sdbquerydatabasenamed": "Queries compatibility database.",
+            "sdbgetdatabasepath": "Gets database path.",
+        }
+    },
+    "dbgcore.dll": {
+        "explanation": "Debug core library; used by debuggers and crash reporting.",
+        "apis": {
+            "minidumpwritedump": "Writes a minidump (also in dbghelp).",
+            "debugconnect": "Connects to a debuggee.",
+            "debugcreate": "Creates debug client.",
+        }
+    },
+    "winfax.dll": {
+        "explanation": "Windows Fax API for sending and receiving faxes.",
+        "apis": {
+            "faxconnectfaxserver": "Connects to a fax server.",
+            "faxsenddocument": "Sends a fax document.",
+            "faxenumeratejobs": "Enumerates fax jobs.",
+            "faxgetjob": "Gets fax job info.",
+            "faxclose": "Closes fax handle.",
+        }
+    },
 }
 
 # --- Dangerous / high-risk API list with categories (lowercase for matching) ---
@@ -1217,4 +2492,257 @@ for category, apis in DANGEROUS_API_LIST.items():
         if key not in _dangerous_with_category:
             dangerous_functions.append(key)
             _dangerous_with_category[key] = category
+
+# --- API risk classification: Dangerous | Suspicious | Uncommon | Common ---
+SUSPICIOUS_API_LIST = [
+    "createtoolhelp32snapshot", "process32first", "process32next", "process32firstw", "process32nextw",
+    "thread32first", "thread32next", "module32first", "module32next", "duplicatehandle",
+    "getthreadcontext", "setthreadcontext",
+    "createmutex", "openmutex", "createevent", "openevent", "createpipe",
+    "getasynckeystate", "getkeystate", "setwindowshookex", "unhookwindowshookex", "callnexthookex",
+    "copyfile", "movefile", "deletefile", "getusername", "getcomputername",
+    "writeprivateprofilestring", "getprivateprofilestring", "getenvironmentvariable", "setenvironmentvariable",
+    "lstrcat", "lstrcpy", "wsprintf", "sprintf", "system",
+    "urlmon", "urldownloadtofile", "certopenstore", "certfindcertificateinstore",
+]
+UNCOMMON_API_LIST = [
+    "ntcreatefile", "ntopenfile", "ntreadfile", "ntwritefile", "ntclose", "ntqueryinformationprocess",
+    "ntquerysysteminformation", "ntallocatevirtualmemory", "ntfreevirtualmemory", "ntprotectvirtualmemory",
+    "ntreadvirtualmemory", "ntwritevirtualmemory", "ntcreatethread", "ntcreatesection", "ntmapviewofsection",
+    "ntunmapviewofsection", "ntopenprocess", "ntopenthread", "ntresumethread", "ntsuspendthread",
+    "ntdelayexecution", "ntqueryobject", "ntquerydirectoryfile", "rtlgenrandom", "dbgbreakpoint",
+    "outputdebugstring", "isdebuggerpresent", "checkremotedebuggerpresent", "ntqueryinformationprocess",
+    "ldrloaddll", "ldrgetprocedureaddress", "rtlcreateuserthread",
+]
+# Build single classification dict: api_lower -> "dangerous" | "suspicious" | "uncommon" | "common"
+API_CLASSIFICATION = {}
+for _api in dangerous_functions:
+    API_CLASSIFICATION[_api] = "dangerous"
+for _api in SUSPICIOUS_API_LIST:
+    key = _api.lower()
+    if key not in API_CLASSIFICATION:
+        API_CLASSIFICATION[key] = "suspicious"
+for _api in UNCOMMON_API_LIST:
+    key = _api.lower()
+    if key not in API_CLASSIFICATION:
+        API_CLASSIFICATION[key] = "uncommon"
+
+def get_api_risk_class(api_name: str) -> str:
+    """Return risk class for an API: dangerous, suspicious, uncommon, or common."""
+    return API_CLASSIFICATION.get(api_name.lower(), "common")
+
+# --- Suspicious combination rules: detect high-risk API/DLL patterns ---
+# Each rule: name, set of required API names (lowercase), description, confidence
+SUSPICIOUS_COMBINATION_RULES = [
+    {
+        "id": "process_injection_classic",
+        "name": "Classic process injection",
+        "required_apis": {"virtualallocex", "writeprocessmemory", "createremotethread"},
+        "description": "VirtualAllocEx + WriteProcessMemory + CreateRemoteThread often indicate code injection into another process.",
+        "confidence": "high",
+    },
+    {
+        "id": "process_injection_nt",
+        "name": "NT-style process injection",
+        "required_apis": {"ntallocatevirtualmemory", "ntwritevirtualmemory", "ntcreatethread"},
+        "description": "NT* memory and thread APIs can be used for direct syscall-based injection.",
+        "confidence": "high",
+    },
+    {
+        "id": "thread_context_injection",
+        "name": "Thread context hijacking",
+        "required_apis": {"getthreadcontext", "setthreadcontext", "virtualallocex"},
+        "description": "Getting/setting thread context with remote memory allocation suggests thread hijacking or injection.",
+        "confidence": "high",
+    },
+    {
+        "id": "persistence_registry_run",
+        "name": "Registry persistence (Run key)",
+        "required_apis": {"regcreatekeyex", "regsetvalueex", "regopenkeyex"},
+        "description": "Creating/setting registry keys is commonly used for persistence (e.g. Run, RunOnce).",
+        "confidence": "medium",
+    },
+    {
+        "id": "service_persistence",
+        "name": "Service-based persistence",
+        "required_apis": {"openscmanagera", "createservicea", "startservice"},
+        "description": "Opening SCM, creating and starting a service is a strong persistence mechanism.",
+        "confidence": "high",
+    },
+    {
+        "id": "keylogging_hooks",
+        "name": "Keylogging / input hooks",
+        "required_apis": {"setwindowshookex", "getasynckeystate"},
+        "description": "SetWindowsHookEx with keyboard hook plus GetAsyncKeyState suggests keylogging capability.",
+        "confidence": "high",
+    },
+    {
+        "id": "keylogging_getkeystate",
+        "name": "Keylogging / key state",
+        "required_apis": {"setwindowshookex", "getkeystate"},
+        "description": "SetWindowsHookEx with GetKeyState can be used to monitor or log keyboard state.",
+        "confidence": "high",
+    },
+    {
+        "id": "memory_protect_alloc",
+        "name": "Memory protection change with allocation",
+        "required_apis": {"virtualalloc", "virtualprotect"},
+        "description": "Allocating memory and changing its protection (e.g. RWX) is common for shellcode or unpacking.",
+        "confidence": "medium",
+    },
+    {
+        "id": "file_write_capability",
+        "name": "File creation and write",
+        "required_apis": {"createfile", "writefile"},
+        "description": "Creating/opening files and writing data can indicate payload drops or config writes.",
+        "confidence": "low",
+    },
+    {
+        "id": "evasion_exception_filter",
+        "name": "Exception filter / crash handler",
+        "required_apis": {"setunhandledexceptionfilter", "virtualprotect"},
+        "description": "Custom exception filter plus memory protection change can hide crashes or alter control flow.",
+        "confidence": "medium",
+    },
+    {
+        "id": "evasion_timing_checks",
+        "name": "Timing / anti-sandbox",
+        "required_apis": {"gettickcount", "queryperformancecounter"},
+        "description": "Multiple timing APIs can be used for anti-debug, anti-sandbox, or delay checks.",
+        "confidence": "low",
+    },
+    {
+        "id": "registry_persistence_write",
+        "name": "Registry write (persistence or config)",
+        "required_apis": {"regopenkeyex", "regsetvalueex"},
+        "description": "Opening registry keys and setting values is used for persistence or storing config.",
+        "confidence": "medium",
+    },
+    {
+        "id": "process_injection_mapping",
+        "name": "Process injection (file mapping)",
+        "required_apis": {"createfilemapping", "mapviewoffile", "openprocess"},
+        "description": "File mapping with MapViewOfFile and OpenProcess can be used for process injection.",
+        "confidence": "medium",
+    },
+    {
+        "id": "dynamic_resolution_plus_memory",
+        "name": "Dynamic resolution with memory",
+        "required_apis": {"loadlibrary", "getprocaddress", "virtualalloc"},
+        "description": "Runtime resolution plus virtual allocation often indicates unpacking or shellcode loading.",
+        "confidence": "medium",
+    },
+    {
+        "id": "dynamic_resolution",
+        "name": "Dynamic API resolution (evasion)",
+        "required_apis": {"loadlibrary", "getprocaddress"},
+        "description": "Loading a DLL and resolving functions at runtime is common in malware to hide imports.",
+        "confidence": "medium",
+    },
+    {
+        "id": "network_c2_wininet",
+        "name": "Network C2 (WinINet)",
+        "required_apis": {"internetopena", "internetconnecta", "httpsendrequesta"},
+        "description": "WinINet open + connect + send request suggests HTTP-based C2 or data exfiltration.",
+        "confidence": "medium",
+    },
+    {
+        "id": "anti_debug_timing",
+        "name": "Anti-debug / timing checks",
+        "required_apis": {"isdebuggerpresent", "gettickcount"},
+        "description": "Debugger check combined with timing can indicate anti-analysis or sandbox evasion.",
+        "confidence": "medium",
+    },
+    {
+        "id": "crypto_and_memory",
+        "name": "Crypto with process memory",
+        "required_apis": {"cryptdecrypt", "virtualalloc"},
+        "description": "Decryption plus virtual memory allocation may indicate payload decryption in memory.",
+        "confidence": "medium",
+    },
+    {
+        "id": "process_termination",
+        "name": "Process termination capability",
+        "required_apis": {"openprocess", "terminateprocess"},
+        "description": "Ability to open and terminate other processes (e.g. killing security tools).",
+        "confidence": "medium",
+    },
+    {
+        "id": "suspicious_dll_set",
+        "name": "Suspicious DLL combination",
+        "required_dlls": {"kernel32.dll", "advapi32.dll", "ws2_32.dll"},
+        "description": "Core system + registry + networking DLLs together often seen in malware.",
+        "confidence": "low",
+    },
+]
+
+def _api_present(all_apis: set, required_name: str) -> bool:
+    """Return True if the required API (or its A/W variant) is in the import set."""
+    r = required_name.lower()
+    if r in all_apis:
+        return True
+    if r.endswith("a") and r[:-1] in all_apis:
+        return True
+    if r.endswith("w") and r[:-1] in all_apis:
+        return True
+    # Match *A/*W imports when rule uses base name: e.g. rule has "loadlibrary", import has "loadlibrarya"
+    if (r + "a") in all_apis or (r + "w") in all_apis:
+        return True
+    return False
+
+
+def _get_matched_apis(all_apis: set, required_names: set) -> list:
+    """Return list of imported API names that matched the required set (for reporting)."""
+    matched = []
+    for r in required_names:
+        rl = r.lower()
+        if rl in all_apis:
+            matched.append(rl)
+        elif (rl + "a") in all_apis:
+            matched.append(rl + "a")
+        elif (rl + "w") in all_apis:
+            matched.append(rl + "w")
+        elif rl.endswith("a") and rl[:-1] in all_apis:
+            matched.append(rl[:-1])
+        elif rl.endswith("w") and rl[:-1] in all_apis:
+            matched.append(rl[:-1])
+    return sorted(matched)
+
+
+def detect_suspicious_combinations(sorted_imports: dict) -> list:
+    """Analyze imports and return list of matched suspicious patterns.
+    API matching is normalized: required_apis can use base names (e.g. regcreatekeyex)
+    and will match both RegCreateKeyExA and RegCreateKeyExW in the binary.
+    """
+    all_apis = set()
+    for funcs in sorted_imports.values():
+        for f in funcs:
+            all_apis.add(f.lower())
+    dlls_lower = {d.split(" (")[0].lower() for d in sorted_imports.keys()}
+    results = []
+    for rule in SUSPICIOUS_COMBINATION_RULES:
+        if "required_apis" in rule:
+            req = rule["required_apis"]
+            if all(_api_present(all_apis, r) for r in req):
+                apis_involved = _get_matched_apis(all_apis, req)
+                results.append({
+                    "id": rule["id"],
+                    "name": rule["name"],
+                    "description": rule["description"],
+                    "confidence": rule["confidence"],
+                    "apis_involved": apis_involved,
+                    "dlls_involved": [],
+                })
+        elif "required_dlls" in rule:
+            req = {d.lower() for d in rule["required_dlls"]}
+            if req.issubset(dlls_lower):
+                results.append({
+                    "id": rule["id"],
+                    "name": rule["name"],
+                    "description": rule["description"],
+                    "confidence": rule["confidence"],
+                    "apis_involved": [],
+                    "dlls_involved": sorted(req),
+                })
+    return results
 
