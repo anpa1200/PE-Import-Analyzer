@@ -6,6 +6,8 @@
 
 A command-line utility to analyze the import table of PE files. Provides detailed DLL descriptions, API function explanations, and flexible output formats (HTML, plain text, JSON). Ideal for **malware analysts**, **reverse engineers**, and **forensic investigators**.
 
+**📖 [PE Import Analyzer: A Practical Guide for Malware Analysts and Reverse Engineers](https://medium.com/@1200km/pe-import-analyzer-a-practical-guide-for-malware-analysts-and-reverse-engineers-29b8b98aeaf3)** (Medium) — installation, usage, risk classification, suspicious combination detection, and LLM-ready output.
+
 ---
 
 ## 🔍 Features
