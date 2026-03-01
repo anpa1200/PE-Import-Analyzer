@@ -148,12 +148,8 @@ python3 PE-Import-Analyzer.py sample.exe --json --dangerous --no-prompt -o repor
 # Then: your_script.py report.json
 ```
 
-Example for LLM assessment:
 
-```bash
-python3 PE-Import-Analyzer.py sample.exe --llm --dangerous --no-prompt -o prompt.txt
-# Paste prompt.txt into ChatGPT or Claude for a short verdict and main indicators.
-```
+
 
 ---
 
